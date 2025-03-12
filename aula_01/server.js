@@ -13,7 +13,6 @@ export const server = createServer((req, res) => {
             res.end('Teste deu ok');
             break;
 
-
         case '/nome':
             if (url.query.usuario) {
                 const usuario = url.query.usuario;
@@ -25,9 +24,8 @@ export const server = createServer((req, res) => {
             }
             break;
 
-
         case '/arquivosync':
-            const data = readFileSync('arquivo.txt');
+            const data = readFileSync('arquivos/arquivo.txt');
             try {
                 res.writeHead(200, { 'Content-Type': 'text/plain' });
                 res.end(data);
@@ -39,9 +37,8 @@ export const server = createServer((req, res) => {
             // console.log("Teste sinc");
             break;
 
-
         case '/arquivoasync':
-            readFile('arquivo.txt', 'utf-8', (err, data) => {
+            readFile('arquivos/arquivo.txt', 'utf-8', (err, data) => {
                 if (err) {
                     res.writeHead(500, { 'Content-Type': 'text/plain' });
                     res.end('Erro ao ler o arquivo de forma assíncrona');
@@ -53,7 +50,6 @@ export const server = createServer((req, res) => {
             });
             // console.log("Teste assinc");
             break;
-
 
         default:
             res.writeHead(404, { 'Content-Type': 'text/plain' });

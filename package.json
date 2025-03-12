@@ -2,9 +2,9 @@
   "name": "exercicios",
   "version": "1.0.0",
   "description": "Projeto destinado para exercicios da matéria de react/node",
-  "main": "index.js",
+  "main": "aula_01/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node aula_01/index.js"
   },
   "author": "",
   "license": "ISC",
